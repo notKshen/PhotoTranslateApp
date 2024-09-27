@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct Camera_Photos_SwiftDataApp: App {
+struct Photo_Translate: App {
     var body: some Scene {
         WindowGroup {
             PhotosListView()
