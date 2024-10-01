@@ -11,8 +11,6 @@
 		8B1287BD2CA2903700F8BA04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287AB2CA2903700F8BA04 /* Constants.swift */; };
 		8B1287BE2CA2903700F8BA04 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287AC2CA2903700F8BA04 /* ImagePicker.swift */; };
 		8B1287BF2CA2903700F8BA04 /* UIKitCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287AD2CA2903700F8BA04 /* UIKitCamera.swift */; };
-		8B1287C02CA2903700F8BA04 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287AE2CA2903700F8BA04 /* ZoomableScrollView.swift */; };
-		8B1287C12CA2903700F8BA04 /* ModelFormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287B02CA2903700F8BA04 /* ModelFormType.swift */; };
 		8B1287C22CA2903700F8BA04 /* UpdateEditFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287B12CA2903700F8BA04 /* UpdateEditFormView.swift */; };
 		8B1287C32CA2903700F8BA04 /* UpdateEditFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287B22CA2903700F8BA04 /* UpdateEditFormViewModel.swift */; };
 		8B1287C42CA2903700F8BA04 /* PhotosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287B72CA2903700F8BA04 /* PhotosListView.swift */; };
@@ -21,6 +19,7 @@
 		8B1287C72CA2903700F8BA04 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287BA2CA2903700F8BA04 /* SampleView.swift */; };
 		8B1287C82CA2903700F8BA04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1287B42CA2903700F8BA04 /* Preview Assets.xcassets */; };
 		8B1287C92CA2903700F8BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1287B62CA2903700F8BA04 /* Assets.xcassets */; };
+		8B1287CD2CABBFC000F8BA04 /* PreviewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287CC2CABBFC000F8BA04 /* PreviewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +28,6 @@
 		8B1287AB2CA2903700F8BA04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B1287AC2CA2903700F8BA04 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8B1287AD2CA2903700F8BA04 /* UIKitCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitCamera.swift; sourceTree = "<group>"; };
-		8B1287AE2CA2903700F8BA04 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
-		8B1287B02CA2903700F8BA04 /* ModelFormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFormType.swift; sourceTree = "<group>"; };
 		8B1287B12CA2903700F8BA04 /* UpdateEditFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEditFormView.swift; sourceTree = "<group>"; };
 		8B1287B22CA2903700F8BA04 /* UpdateEditFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEditFormViewModel.swift; sourceTree = "<group>"; };
 		8B1287B42CA2903700F8BA04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,6 +36,8 @@
 		8B1287B82CA2903700F8BA04 /* Photo_Translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_Translate.swift; sourceTree = "<group>"; };
 		8B1287B92CA2903700F8BA04 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		8B1287BA2CA2903700F8BA04 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		8B1287CC2CABBFC000F8BA04 /* PreviewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModifiers.swift; sourceTree = "<group>"; };
+		8B1287CE2CABCD6100F8BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +73,6 @@
 				8B1287AB2CA2903700F8BA04 /* Constants.swift */,
 				8B1287AC2CA2903700F8BA04 /* ImagePicker.swift */,
 				8B1287AA2CA2903700F8BA04 /* CameraPermission.swift */,
-				8B1287AE2CA2903700F8BA04 /* ZoomableScrollView.swift */,
 				8B1287AD2CA2903700F8BA04 /* UIKitCamera.swift */,
 			);
 			path = ImagePicker_Camera;
@@ -85,7 +83,6 @@
 			children = (
 				8B1287B22CA2903700F8BA04 /* UpdateEditFormViewModel.swift */,
 				8B1287B12CA2903700F8BA04 /* UpdateEditFormView.swift */,
-				8B1287B02CA2903700F8BA04 /* ModelFormType.swift */,
 			);
 			path = "Model Edits";
 			sourceTree = "<group>";
@@ -101,10 +98,12 @@
 		8B1287BB2CA2903700F8BA04 /* PhotoTranslateApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B1287CE2CABCD6100F8BA04 /* Info.plist */,
 				8B1287B82CA2903700F8BA04 /* Photo_Translate.swift */,
 				8B1287B72CA2903700F8BA04 /* PhotosListView.swift */,
 				8B1287BA2CA2903700F8BA04 /* SampleView.swift */,
 				8B1287B92CA2903700F8BA04 /* SampleModel.swift */,
+				8B1287CC2CABBFC000F8BA04 /* PreviewModifiers.swift */,
 				8B1287B32CA2903700F8BA04 /* Model Edits */,
 				8B1287AF2CA2903700F8BA04 /* ImagePicker_Camera */,
 				8B1287B62CA2903700F8BA04 /* Assets.xcassets */,
@@ -190,13 +189,12 @@
 				8B1287BD2CA2903700F8BA04 /* Constants.swift in Sources */,
 				8B1287BE2CA2903700F8BA04 /* ImagePicker.swift in Sources */,
 				8B1287BF2CA2903700F8BA04 /* UIKitCamera.swift in Sources */,
-				8B1287C02CA2903700F8BA04 /* ZoomableScrollView.swift in Sources */,
-				8B1287C12CA2903700F8BA04 /* ModelFormType.swift in Sources */,
 				8B1287C22CA2903700F8BA04 /* UpdateEditFormView.swift in Sources */,
 				8B1287C32CA2903700F8BA04 /* UpdateEditFormViewModel.swift in Sources */,
 				8B1287C42CA2903700F8BA04 /* PhotosListView.swift in Sources */,
 				8B1287C52CA2903700F8BA04 /* Photo_Translate.swift in Sources */,
 				8B1287C62CA2903700F8BA04 /* SampleModel.swift in Sources */,
+				8B1287CD2CABBFC000F8BA04 /* PreviewModifiers.swift in Sources */,
 				8B1287C72CA2903700F8BA04 /* SampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +331,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoTranslateApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoTranslateApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission required to take photos with the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -362,6 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoTranslateApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoTranslateApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission required to take photos with the camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

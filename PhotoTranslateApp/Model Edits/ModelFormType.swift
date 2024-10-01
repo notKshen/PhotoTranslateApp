@@ -17,8 +17,8 @@ enum ModelFormType: Identifiable, View {
         switch self {
         case .new:
             UpdateEditFormView(vm: UpdateEditFormViewModel())
-        case .update(let sample):
-            UpdateEditFormView(vm: UpdateEditFormViewModel(sample: sample))
+        case .update:
+            UpdateEditFormView(vm: UpdateEditFormViewModel())
         }
     }
 }

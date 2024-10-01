@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct PhotosListView: View {
-    @Query(sort: \SampleModel.name) var samples: [SampleModel]
+    @Query var samples: [SampleModel]
     @Environment(\.modelContext) private var modelContext
-    @State private var formType: ModelFormType?
+    @State private var isShowingSheet = false
     var body: some View {
         NavigationStack {
             Group {
@@ -46,20 +46,21 @@ struct PhotosListView: View {
             .navigationDestination(for: SampleModel.self) { sample in
                 SampleView(sample: sample)
             }
-            .navigationTitle("Picker or Camera")
+            .navigationTitle("Collage")
             .toolbar {
                 Button {
-                    formType = .new
+                    isShowingSheet.toggle()
                 }label: {
                     Image(systemName: "plus.circle.fill")
                 }
-                .sheet(item: $formType) { $0 }
+                .sheet(isPresented: $isShowingSheet) {
+                    UpdateEditFormView(vm: UpdateEditFormViewModel())
+                }
             }
         }
     }
 }
 
-#Preview {
+#Preview(traits: .mockData){
     PhotosListView()
-        .modelContainer(SampleModel.preview)
 }

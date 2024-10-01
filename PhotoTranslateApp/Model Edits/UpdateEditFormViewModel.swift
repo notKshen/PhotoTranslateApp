@@ -12,7 +12,6 @@ class UpdateEditFormViewModel {
     var name: String = ""
     var data: Data?
     
-    var sample: SampleModel?
     var cameraImage: UIImage?
     
     var image: UIImage {
@@ -22,19 +21,4 @@ class UpdateEditFormViewModel {
             return Constants.placeholder
         }
     }
-    
-    init() {}
-    init(sample: SampleModel) {
-        self.sample = sample
-        self.name = sample.name
-        self.data = sample.data
-    }
-    
-    @MainActor
-    func clearImage() {
-        data = nil
-    }
-    
-    var isUpDating: Bool { sample != nil }
-    var isDisabled: Bool { name.isEmpty }
 }

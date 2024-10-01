@@ -19,14 +19,7 @@ struct UpdateEditFormView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name", text: $vm.name)
-                VStack {
-                    if vm.data != nil {
-                        Button("Clear image") {
-                            vm.clearImage()
-                        }
-                        .buttonStyle(.bordered)
-                    }
+                VStack{
                     HStack {
                         Button("Camera", systemImage: "camera") {
                             if let error = CameraPermission.checkPermissions() {
@@ -50,6 +43,7 @@ struct UpdateEditFormView: View {
                             Label("Photos", systemImage: "photo")
                         }
                     }
+                    .padding()
                     .foregroundStyle(.white)
                     .buttonStyle(.borderedProminent)
                     Image(uiImage: vm.image)
@@ -58,6 +52,7 @@ struct UpdateEditFormView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                         .padding()
                 }
+                .navigationBarBackButtonHidden()
             }
             .onAppear {
                 imagePicker.setup(vm)
@@ -75,30 +70,18 @@ struct UpdateEditFormView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if vm.isUpDating {
-                            if let sample = vm.sample {
-                                if vm.image != Constants.placeholder {
-                                    sample.data = vm.image.jpegData(compressionQuality: 0.8)
-                                } else {
-                                    sample.data = nil
-                                }
-                                sample.name = vm.name
-                                dismiss()
-                            }
+                        let newSample = SampleModel(name: vm.name)
+                        if vm.image != Constants.placeholder {
+                            newSample.data = vm.image.jpegData(compressionQuality: 0.8)
                         } else {
-                            let newSample = SampleModel(name: vm.name)
-                            if vm.image != Constants.placeholder {
-                                newSample.data = vm.image.jpegData(compressionQuality: 0.8)
-                            } else {
-                                newSample.data = nil
-                            }
-                            modelContext.insert(newSample)
-                            dismiss()
+                            newSample.data = nil
                         }
+                        modelContext.insert(newSample)
+                        dismiss()
+                        
                     } label: {
-                        Text(vm.isUpDating ? "Update" : "Add")
+                        Text("Add")
                     }
-                    .disabled(vm.isDisabled)
                 }
             }
         }
