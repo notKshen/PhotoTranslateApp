@@ -50,6 +50,13 @@ struct NewImageView: View {
                                 if let data = try? await newValue?.loadTransferable(type: Data.self) {
                                     vm.data = data
                                     classifier.detect(ciImage: CIImage(data: data)!)
+                                    // Format Classifier results
+                                    let name = classifier.result!
+                                    if let firstComma = name.firstIndex(of: ",") {
+                                        vm.name = String(name.prefix(upTo: firstComma)).capitalized
+                                    } else {
+                                        vm.name = name.capitalized
+                                    }
                                 }
                             }
                         })
@@ -62,7 +69,7 @@ struct NewImageView: View {
                     Image(uiImage: vm.image)
                         .resizable()
                         .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                         .padding()
                     // Classifier Result
                     if classifier.result != nil {
@@ -71,6 +78,7 @@ struct NewImageView: View {
                             let name = classifier.result!
                             if let firstComma = name.firstIndex(of: ",") {
                                 Text((String(name.prefix(upTo: firstComma)).capitalized))
+                                    .font(.largeTitle)
                             } else {
                                 Text(name.capitalized)
                             }
@@ -80,6 +88,14 @@ struct NewImageView: View {
                 }
                 .navigationBarBackButtonHidden()
             }
+            .tint(.mint)
+            .background() {
+                Image("PastelBackground")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+            }
+            .scrollContentBackground(.hidden)
             .onAppear {
                 imagePicker.setup(vm)
             }
@@ -89,6 +105,13 @@ struct NewImageView: View {
                     vm.data = image.jpegData(compressionQuality: 0.8)
                     if let data = vm.data, let ciImage = CIImage(data: data) {
                         classifier.detect(ciImage: ciImage)
+                    }
+                    // Format Classifier results
+                    let name = classifier.result!
+                    if let firstComma = name.firstIndex(of: ",") {
+                        vm.name = String(name.prefix(upTo: firstComma)).capitalized
+                    } else {
+                        vm.name = name.capitalized
                     }
                 }
                 
@@ -104,13 +127,6 @@ struct NewImageView: View {
                 // Add Button
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        // Format Classifier results
-                        let name = classifier.result!
-                        if let firstComma = name.firstIndex(of: ",") {
-                            vm.name = String(name.prefix(upTo: firstComma)).capitalized
-                        } else {
-                            vm.name = name.capitalized
-                        }
                         // Create Model
                         let newSample = ImageModel(name: vm.name)
                         if vm.image != Constants.placeholder {
@@ -124,6 +140,7 @@ struct NewImageView: View {
                     } label: {
                         Text("Add")
                     }
+                    .disabled(vm.isDisabled)
                 }
             }
         }

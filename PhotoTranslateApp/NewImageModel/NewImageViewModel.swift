@@ -21,4 +21,6 @@ class NewImageViewModel {
             return Constants.placeholder
         }
     }
+    
+    var isDisabled: Bool {name.isEmpty}
 }
