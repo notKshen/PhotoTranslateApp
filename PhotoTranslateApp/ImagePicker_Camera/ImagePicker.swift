@@ -16,9 +16,9 @@ class ImagePicker {
     var images: [Image] = []
   
   // Change the UpdateEditFormViewModel to match the name of your own ViewModel
-    var vm: UpdateEditFormViewModel?
+    var vm: NewImageViewModel?
     
-    func setup(_ vm: UpdateEditFormViewModel) {
+    func setup(_ vm: NewImageViewModel) {
         self.vm = vm
     }
     var imageSelection: PhotosPickerItem? {

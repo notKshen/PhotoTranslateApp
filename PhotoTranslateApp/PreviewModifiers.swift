@@ -15,10 +15,10 @@ struct MockData: PreviewModifier {
     }
     
     static func makeSharedContext() async throws -> ModelContainer {
-        let container = try! ModelContainer(for: SampleModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
-        container.mainContext.insert(SampleModel(name: "sample 1"))
-        container.mainContext.insert(SampleModel(name: "sample 2"))
-        container.mainContext.insert(SampleModel(name: "sample 3"))
+        let container = try! ModelContainer(for: ImageModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        container.mainContext.insert(ImageModel(name: "sample 1"))
+        container.mainContext.insert(ImageModel(name: "sample 2"))
+        container.mainContext.insert(ImageModel(name: "sample 3"))
         return container
     }
 }

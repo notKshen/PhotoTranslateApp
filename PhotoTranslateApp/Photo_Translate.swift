@@ -13,7 +13,7 @@ struct Photo_Translate: App {
     var body: some Scene {
         WindowGroup {
             PhotosListView()
-                .modelContainer(for: SampleModel.self)
+                .modelContainer(for: ImageModel.self)
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PhotosListView: View {
-    @Query var samples: [SampleModel]
+    @Query(sort: \ImageModel.id, order: .reverse) var samples: [ImageModel]
     @Environment(\.modelContext) private var modelContext
     @State private var isShowingSheet = false
     var body: some View {
@@ -43,8 +43,8 @@ struct PhotosListView: View {
                     .listStyle(.plain)
                 }
             }
-            .navigationDestination(for: SampleModel.self) { sample in
-                SampleView(sample: sample)
+            .navigationDestination(for: ImageModel.self) { sample in
+                ImageView(sample: sample)
             }
             .navigationTitle("Collage")
             .toolbar {
@@ -54,7 +54,7 @@ struct PhotosListView: View {
                     Image(systemName: "plus.circle.fill")
                 }
                 .sheet(isPresented: $isShowingSheet) {
-                    UpdateEditFormView(vm: UpdateEditFormViewModel())
+                    NewImageView(vm: NewImageViewModel())
                 }
             }
         }
