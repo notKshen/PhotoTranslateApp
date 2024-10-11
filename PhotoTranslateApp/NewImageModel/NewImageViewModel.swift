@@ -10,6 +10,7 @@ import UIKit
 @Observable
 class NewImageViewModel {
     var name: String = ""
+    var translation: String?
     var data: Data?
     
     var cameraImage: UIImage?

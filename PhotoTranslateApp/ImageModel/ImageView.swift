@@ -21,10 +21,15 @@ struct ImageView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .padding(.top, 15)
                     .padding(.horizontal, 15)
-                    
-                Text(image.name)
-                    .font(.largeTitle)
-                    .padding()
+                
+                VStack {
+                    Text(image.name)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    Text(image.translation ?? "translation")
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .font(.title)
+                
 
             }
             .background(Color.white)

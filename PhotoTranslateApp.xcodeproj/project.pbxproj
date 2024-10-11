@@ -22,7 +22,8 @@
 		8B1287CD2CABBFC000F8BA04 /* PreviewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287CC2CABBFC000F8BA04 /* PreviewModifiers.swift */; };
 		8B1287D12CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D02CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage */; };
 		8B1287D52CB05B2800F8BA04 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D42CB05B2800F8BA04 /* Classifier.swift */; };
-		8B1287DB2CB084AB00F8BA04 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287DA2CB084AB00F8BA04 /* SwiftUIView.swift */; };
+		8B1287F82CB3C60B00F8BA04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287F72CB3C60B00F8BA04 /* DataService.swift */; };
+		8B1287FC2CB3C68900F8BA04 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,8 @@
 		8B1287CE2CABCD6100F8BA04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1287D02CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FastViTMA36F16.mlpackage; sourceTree = "<group>"; };
 		8B1287D42CB05B2800F8BA04 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		8B1287DA2CB084AB00F8BA04 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		8B1287F72CB3C60B00F8BA04 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,14 +100,15 @@
 			children = (
 				8B1287B82CA2903700F8BA04 /* Photo_Translate.swift */,
 				8B1287B72CA2903700F8BA04 /* PhotosListView.swift */,
-				8B1287DA2CB084AB00F8BA04 /* SwiftUIView.swift */,
 				8B1287CE2CABCD6100F8BA04 /* Info.plist */,
 				8B1287B62CA2903700F8BA04 /* Assets.xcassets */,
+				8B1287F62CB3C5FC00F8BA04 /* Services */,
 				8B1287D82CB06CF000F8BA04 /* ImageModel */,
 				8B1287D72CB06C6B00F8BA04 /* NewImageModel */,
 				8B1287AF2CA2903700F8BA04 /* ImagePicker_Camera */,
 				8B1287D32CB05B1300F8BA04 /* ImageRecog */,
 				8B1287B52CA2903700F8BA04 /* Preview Content */,
+				8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */,
 			);
 			path = PhotoTranslateApp;
 			sourceTree = "<group>";
@@ -151,6 +154,14 @@
 				8B1287B92CA2903700F8BA04 /* ImageModel.swift */,
 			);
 			path = ImageModel;
+			sourceTree = "<group>";
+		};
+		8B1287F62CB3C5FC00F8BA04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B1287F72CB3C60B00F8BA04 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1287C82CA2903700F8BA04 /* Preview Assets.xcassets in Resources */,
+				8B1287FC2CB3C68900F8BA04 /* Config.xcconfig in Resources */,
 				8B1287C92CA2903700F8BA04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +246,7 @@
 				8B1287C22CA2903700F8BA04 /* NewImageView.swift in Sources */,
 				8B1287C32CA2903700F8BA04 /* NewImageViewModel.swift in Sources */,
 				8B1287C42CA2903700F8BA04 /* PhotosListView.swift in Sources */,
-				8B1287DB2CB084AB00F8BA04 /* SwiftUIView.swift in Sources */,
+				8B1287F82CB3C60B00F8BA04 /* DataService.swift in Sources */,
 				8B1287C52CA2903700F8BA04 /* Photo_Translate.swift in Sources */,
 				8B1287D12CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage in Sources */,
 				8B1287C62CA2903700F8BA04 /* ImageModel.swift in Sources */,
@@ -248,6 +260,7 @@
 /* Begin XCBuildConfiguration section */
 		8B12871C2CA2896200F8BA04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -311,6 +324,7 @@
 		};
 		8B12871D2CA2896200F8BA04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

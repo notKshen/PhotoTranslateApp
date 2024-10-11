@@ -57,6 +57,9 @@ struct NewImageView: View {
                                     } else {
                                         vm.name = name.capitalized
                                     }
+                                    let dataService = DataService()
+                                    vm.translation = await dataService.getTranslation(for: vm.name)
+                                    
                                 }
                             }
                         })
@@ -70,21 +73,20 @@ struct NewImageView: View {
                         .resizable()
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 5))
-                        .padding()
+                        .padding(.horizontal, 5)
                     // Classifier Result
                     if classifier.result != nil {
                         VStack(alignment: .leading){
-                            // Format Classifier results
-                            let name = classifier.result!
-                            if let firstComma = name.firstIndex(of: ",") {
-                                Text((String(name.prefix(upTo: firstComma)).capitalized))
-                                    .font(.largeTitle)
-                            } else {
-                                Text(name.capitalized)
-                            }
+                            Text(vm.name)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                            Text(vm.translation ?? "Translation")
+                                .frame(maxWidth: .infinity, alignment: .center)
                         }
-                        .padding()
+                        .font(.title)
+                        
+
                     }
+                    
                 }
                 .navigationBarBackButtonHidden()
             }
@@ -113,6 +115,10 @@ struct NewImageView: View {
                     } else {
                         vm.name = name.capitalized
                     }
+                    Task {
+                        let dataService = DataService()
+                        vm.translation = await dataService.getTranslation(for: vm.name)
+                    }
                 }
                 
             }
@@ -129,6 +135,7 @@ struct NewImageView: View {
                     Button {
                         // Create Model
                         let newSample = ImageModel(name: vm.name)
+                        newSample.translation = vm.translation
                         if vm.image != Constants.placeholder {
                             newSample.data = vm.image.jpegData(compressionQuality: 0.8)
                         } else {
