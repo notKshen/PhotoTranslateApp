@@ -101,7 +101,7 @@ struct NewImageView: View {
             .onAppear {
                 imagePicker.setup(vm)
             }
-            // Call Image Classifier
+            // Call Image Classifier On Camera Image
             .onChange(of: vm.cameraImage) {
                 if let image = vm.cameraImage {
                     vm.data = image.jpegData(compressionQuality: 0.8)
