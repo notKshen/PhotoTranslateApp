@@ -8,4 +8,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-API_KEY = AIzaSyAO108oBVfddE1MyhOm7qpw7xqk95RcTUY
+// API Key
+API_KEY = AIzaSyCm2Y2tGnZsnvun5i4x8DwteooPbmbXfpM
