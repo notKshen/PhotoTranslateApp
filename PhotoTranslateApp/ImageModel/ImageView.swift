@@ -13,14 +13,13 @@ struct ImageView: View {
     @Environment(\.dismiss) private var dismiss
     @Bindable var image: ImageModel
     var body: some View {
-        ZStack {
+        Form {
             VStack {
                 Image(uiImage: image.image == nil ? Constants.placeholder : image.image!)
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .padding(.top, 15)
-                    .padding(.horizontal, 15)
+                    .padding(.top, 10)
                 
                 VStack {
                     Text(image.name)
@@ -32,23 +31,15 @@ struct ImageView: View {
                 
 
             }
-            .background(Color.white)
             .cornerRadius(5)
-            .padding()
         }
-        .frame(
-              minWidth: 0,
-              maxWidth: .infinity,
-              minHeight: 0,
-              maxHeight: .infinity,
-              alignment: .center
-            )
         .background() {
             Image("PastelBackground")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
         }
+        .scrollContentBackground(.hidden)
     }
 }
 

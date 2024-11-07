@@ -68,7 +68,7 @@ struct PhotosListView: View {
                     isShowingSheet.toggle()
                 }label: {
                     Image(systemName: "plus.circle.fill")
-                        .tint(.black)
+                        .tint(.accentColor)
                 }
                 .sheet(isPresented: $isShowingSheet) {
                     NewImageView(vm: NewImageViewModel())
@@ -76,7 +76,7 @@ struct PhotosListView: View {
                 
             }
         }
-        .tint(.black)
+        .tint(.accentColor)
     }
 }
 

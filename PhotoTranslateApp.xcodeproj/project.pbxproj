@@ -23,7 +23,6 @@
 		8B1287D12CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D02CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage */; };
 		8B1287D52CB05B2800F8BA04 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D42CB05B2800F8BA04 /* Classifier.swift */; };
 		8B1287F82CB3C60B00F8BA04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287F72CB3C60B00F8BA04 /* DataService.swift */; };
-		8B1287FC2CB3C68900F8BA04 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +193,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					8B12870F2CA2896100F8BA04 = {
 						CreatedOnToolsVersion = 16.0;
@@ -226,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1287C82CA2903700F8BA04 /* Preview Assets.xcassets in Resources */,
-				8B1287FC2CB3C68900F8BA04 /* Config.xcconfig in Resources */,
 				8B1287C92CA2903700F8BA04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoTranslateApp/Preview Content\"";
+				DEVELOPMENT_TEAM = SN2XN2X634;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoTranslateApp/Info.plist;
@@ -417,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoTranslateApp/Preview Content\"";
+				DEVELOPMENT_TEAM = SN2XN2X634;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoTranslateApp/Info.plist;
