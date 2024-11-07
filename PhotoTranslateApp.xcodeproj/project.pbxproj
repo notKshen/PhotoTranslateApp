@@ -23,6 +23,7 @@
 		8B1287D12CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D02CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage */; };
 		8B1287D52CB05B2800F8BA04 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287D42CB05B2800F8BA04 /* Classifier.swift */; };
 		8B1287F82CB3C60B00F8BA04 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1287F72CB3C60B00F8BA04 /* DataService.swift */; };
+		8B8337B62CDCC3E100395203 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8B8337B52CDCC3E100395203 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,7 @@
 		8B1287D02CAFA68A00F8BA04 /* FastViTMA36F16.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FastViTMA36F16.mlpackage; sourceTree = "<group>"; };
 		8B1287D42CB05B2800F8BA04 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		8B1287F72CB3C60B00F8BA04 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		8B8337B52CDCC3E100395203 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +108,7 @@
 				8B1287AF2CA2903700F8BA04 /* ImagePicker_Camera */,
 				8B1287D32CB05B1300F8BA04 /* ImageRecog */,
 				8B1287B52CA2903700F8BA04 /* Preview Content */,
-				8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */,
+				8B8337B52CDCC3E100395203 /* Config.xcconfig */,
 			);
 			path = PhotoTranslateApp;
 			sourceTree = "<group>";
@@ -225,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1287C82CA2903700F8BA04 /* Preview Assets.xcassets in Resources */,
+				8B8337B62CDCC3E100395203 /* Config.xcconfig in Resources */,
 				8B1287C92CA2903700F8BA04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +260,7 @@
 /* Begin XCBuildConfiguration section */
 		8B12871C2CA2896200F8BA04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */;
+			baseConfigurationReference = 8B8337B52CDCC3E100395203 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -322,7 +324,7 @@
 		};
 		8B12871D2CA2896200F8BA04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B1287FB2CB3C68900F8BA04 /* Config.xcconfig */;
+			baseConfigurationReference = 8B8337B52CDCC3E100395203 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
